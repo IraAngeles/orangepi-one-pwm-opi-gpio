@@ -1,7 +1,3 @@
 *.pyc
 .DS_Store
 
-example_bis.py
-example_ter.py
-Adafruit_I2C.py
-Adafruit_MCP230xx.py 
