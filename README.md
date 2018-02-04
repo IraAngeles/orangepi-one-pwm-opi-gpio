@@ -1,7 +1,7 @@
-OrangePWM - Python PWM for Orange Pi
+OrangePWM - Python software PWM for Orange Pi
 =======
 
-OrangePWM Python, for Orange Pi Lite, Orange Pi PC, Orange Pi Zero is easy programmatic PWM ligrary, is an easy way to implement PWM (Pulse Width Modulation) output on Orange Pi using Python language.
+OrangePWM Python, for Orange Pi Lite, Orange Pi PC, Orange Pi Zero is easy programmatic PWM ligrary, is an easy way to implement software PWM (Pulse Width Modulation) output on Orange Pi using Python language.
 
 * [Authors's website - RU/UA](http://evergreens.com.ua/ru/products/development/iot-devices.html)
 * [Authors's website - EN](http://evergreen.team/en/products/development/iot-devices.html)
