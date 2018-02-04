@@ -7,10 +7,10 @@ class OrangePwm(threading.Thread):
 
   def __init__(self, frequency, gpioPin, gpioScheme=0):
      """ 
-     Init the PiZyPwm instance. Expected parameters are :
+     Init the OrangePwm instance. Expected parameters are :
      - frequency : the frequency in Hz for the PWM pattern. A correct value may be 100.
-     - gpioPin : the pin number which will act as PWM ouput
-     - gpioScheme : the GPIO naming scheme (see RPi.GPIO documentation)
+     - gpioPin : the gpio.port which will act as PWM ouput
+     - gpioScheme : saved for compatibility with PiZyPWM code
      """
      self.baseTime = 1.0 / frequency
      self.maxCycle = 100.0
