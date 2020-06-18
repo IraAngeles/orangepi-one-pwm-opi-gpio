@@ -58,3 +58,4 @@ sleep(2)
 
 # Stop PWM output
 pwm.stop()
+# orangepi-one-pwm-opi-gpio

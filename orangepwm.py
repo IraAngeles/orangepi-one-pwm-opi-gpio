@@ -1,5 +1,7 @@
-from pyA20.gpio import gpio as GPIO
-from pyA20.gpio import port
+# from pyA20.gpio import gpio as GPIO
+# from pyA20.gpio import port
+import OPi.GPIO as GPIO
+
 import threading
 import time
  
@@ -30,7 +32,9 @@ class OrangePwm(threading.Thread):
     stay HIGH for 1*(25/100) seconds on HIGH output, and 1*(75/100) seconds on LOW output.
     """
     self.dutyCycle = dutyCycle
-    GPIO.setcfg(self.gpioPin, GPIO.OUTPUT)
+    # GPIO.setcfg(self.gpioPin, GPIO.OUTPUT)
+    GPIO.setmode(GPIO.SUNXI)
+    GPIO.setup(self.gpioPin, GPIO.OUT)
     self.thread = threading.Thread(None, self.run, None, (), {})
     self.thread.start()
 
@@ -84,4 +88,6 @@ class OrangePwm(threading.Thread):
       time.sleep(0.01)
   
     GPIO.output(self.gpioPin, GPIO.LOW)
-    GPIO.setcfg(self.gpioPin, GPIO.INPUT)
+    GPIO.cleanup()
+    # GPIO.setup(self.gpioPin, GPIO.input)
+    # GPIO.setcfg(self.gpioPin, GPIO.INPUT)
